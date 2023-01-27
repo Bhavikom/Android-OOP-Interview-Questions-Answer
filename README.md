@@ -256,9 +256,52 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
 ![image](https://user-images.githubusercontent.com/35212651/215100046-d4d3b8b8-a30a-42ba-9cc7-7aaa0f107b10.png)
 
     
-**13. 
+**13. What is constructor in OOP ?**
 
+    constructors in Java is a terminology used to construct something in our programs. A constructor in Java is a special method that is 
+    used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes. 
 
+    In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. 
+    At the time of calling the constructor, memory for the object is allocated in the memory. It is a special type of method which 
+    is used to initialize the object. Every time an object is created using the new() keyword, at least one constructor is called.
+    
+    **How Constructors are Different From Methods in Java? 
+    
+    Constructors must have the same name as the class within which it is defined it is not necessary for the method in Java.
+    Constructors do not return any type while method(s) have the return type or void if does not return any value.
+    Constructors are called only once at the time of Object creation while method(s) can be called any number of times.
+
+    **Example** :-
+    class Geek
+    {   
+        // A Constructor
+        Geek() {}
+    }
+    // We can create an object of the above class
+    // using the below statement. This statement
+    // calls above constructor.
+    Geek obj = new Geek(); 
+    
+    **Need of Constructor**
+    Think of a Box. If we talk about a box class then it will have some class variables (say length, breadth, and height). 
+    But when it comes to creating its object(i.e Box will now exist in the computer’s memory), then can a box be there with 
+    no value defined for its dimensions? The answer is No. 
+    
+    So constructors are used to assign values to the class variables at the time of object creation, either explicitly 
+    done by the programmer or by Java itself (default constructor).
+    
+    **When Constructor is called?**
+    
+    Each time an object is created using a new() keyword, at least one constructor (it could be the default constructor) 
+    is invoked to assign initial values to the data members of the same class. 
+
+    Rules for writing constructors are as follows:
+
+    The constructor(s) of a class must have the same name as the class name in which it resides.
+    A constructor in Java can not be abstract, final, static, or Synchronized.
+    Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.
+    So by far, we have learned constructors are used to initialize the object’s state. Like methods, a constructor also contains a 
+    collection of statements(i.e. instructions) that are executed at the time of Object creation.
     
     
      
