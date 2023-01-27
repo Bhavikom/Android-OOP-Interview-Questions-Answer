@@ -1,16 +1,31 @@
 # Android-OOP-Interview-Questions-Answer
 
 
-**1. What is an Object ?**
+**1. Java - What is OOP ?**
+
+	OOP stands for Object-Oriented Programming.
+
+	Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented 
+    programming is about creating objects that contain both data and methods.
+
+	Object-oriented programming has several advantages over procedural programming:
+
+	OOP is faster and easier to execute
+	OOP provides a clear structure for the programs
+	OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+	OOP makes it possible to create full reusable applications with less code and shorter development time
+	Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application,       and place them at a single place and reuse them instead of repeating it.
+    
+**2. What is an Object ?**
 
     An object is an instance of a class that has states and behaviors. A Class can be defined as a template that describes 
     the behavior/state that the object of its type support.
     
-**2. What is the main feature of OOP ?**
+**3. What is the main feature of OOP ?**
 
     Encapsulation, Polymorphism, Inheritance, Abstraction
     
-**3. What is encapsulation ?**
+**4. What is encapsulation ?**
 
     Encapsulation is one of the four fundamental OOP concepts. It is a mechanism of wrapping the data (variables) and code acting 
     on the data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, 
@@ -23,12 +38,12 @@
     The fields of a class can be made read-only or write-only.
     A class can have total control over what is stored in its fields.
   
-**4. What is Polymorphism ?**
+**5. What is Polymorphism ?**
 
     The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed 
     in more than one form. In Java polymorphism is mainly divided into two types: compile-time and runtime polymorphism.
   
-**5. What is the difference between static and dynamic Polymorphism ?**
+**6. What is the difference between static and dynamic Polymorphism ?**
   
     method overloading represents a static form of polymorphism. method overloading means using two or more functions with same name 
     but with the different parameters. Static polymorphism is resolved on compile-time and that is why it's called static.
@@ -76,7 +91,7 @@
             }
       }
       
-**6. What is inheritance in OOP ?**
+**7. What is inheritance in OOP ?**
 
       Inheritance is a mechanism that allows the class to use the states and behavior of another class. In simple words a class derive 
       field and methods from another class. The derived class in inheritance is called sub class (also called derived class or extended 
@@ -91,7 +106,7 @@
       Multilevel Inheritance
       Hierarchical Inheritance
       
-**7. Why multiple inheritance is not supported in java ?**
+**8. Why multiple inheritance is not supported in java ?**
 
       To remove ambiguity:
       Multiple inheritance is not supported in java as it causes ambiguity in few scenarios. The most common scenario is Diamond problem.
@@ -102,7 +117,7 @@
       then which method would be called? That’s why multiple inheritance is not supported in java as to remove ambiguity.
       
       
-**8. Use of super keywork in Inheritance. ?**
+**9. Use of super keywork in Inheritance. ?**
 
       Base.java:
       class Base
@@ -128,7 +143,7 @@
        }
     
     
-**9. Inheritance Important Points To Remember ?**
+**10. Inheritance Important Points To Remember ?**
 
     1.Whenever a parent class and a child class both are having same data members then this concept is known as data hiding.
     2.Whenever a parent class and a child class both are having ditto same functions then this concept is known as method overriding.
@@ -140,13 +155,13 @@
     7.Inheritance is-a relationship between a Base class and its child class.
     8.Multiple inheritance is not supported in JAVA.
         
-**10. Can Interfaces to be extended OR Can an Interface implement another Interface ?**
+**11. Can Interfaces to be extended OR Can an Interface implement another Interface ?**
 
     Yes, an interface can extend other interfaces. it supports multiple inheritances, which means it can extend more than one interface. 
     But every class which wants to use an interface must add it by keyword implements and using the keyword extends for 
     interfaces in classes is illegal and cause compile error.
     
-**11. Abstraction in OOP ?**
+**12. Abstraction in OOP ?**
 
     Abstraction is the concept of object-oriented programming that “shows” only essential attributes and “hides” unnecessary information. 
     The main purpose of abstraction is hiding the unnecessary details from the users. Abstraction is selecting data from a larger pool 
@@ -239,7 +254,7 @@
         }
     }
     
-**12. Differences between abstract classes and interfaces ?**
+**13. Differences between abstract classes and interfaces ?**
 
     An abstract class, is a class that contains both concrete and abstract methods (methods without implementations). 
     An abstract method must be implemented by the abstract class sub-classes. Abstract classes cannot be instantiated and need to be extended to be used.
@@ -256,7 +271,7 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
 ![image](https://user-images.githubusercontent.com/35212651/215100046-d4d3b8b8-a30a-42ba-9cc7-7aaa0f107b10.png)
 
     
-**13. What is constructor in OOP ?**
+**14. What is constructor in OOP ?**
 
     constructors in Java is a terminology used to construct something in our programs. A constructor in Java is a special method that is 
     used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes. 
@@ -317,7 +332,7 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
     It is taken out. It is being overloaded and called a parameterized constructor. The default constructor changed into the parameterized constructor. 
     But Parameterized constructor can’t change the default constructor.
     
-**14. What is the difference between a constructor and a method ?**
+**15. What is the difference between a constructor and a method ?**
 
     1.The name of the constructor is same as that of the class name, whereas the name of the method can be anything.
 
@@ -330,6 +345,10 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
     5.Constructor and a method they both run a block of code but the difference is in calling them.
 
     6.We can call method directly using their name.
+    
+ **9. How to prevent a class to be extended ?**
+
+	simply use keyword final in definition of class or methods. for example:
 
     
     
