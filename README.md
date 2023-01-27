@@ -303,6 +303,21 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
     So by far, we have learned constructors are used to initialize the object’s state. Like methods, a constructor also contains a 
     collection of statements(i.e. instructions) that are executed at the time of Object creation.
     
+    Types of Constructors in Java
+    
+    1.No-argument constructor = A constructor that has no parameter is known as the No-argument or Zero argument constructor. 
+    If we don’t define a constructor in a class, then the compiler creates a constructor(with no arguments) for the class. 
+    And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor
+    
+    2.Parameterized Constructor = A constructor that has parameters is known as parameterized constructor. If we want to 
+    initialize fields of the class with our own values, then use a parameterized constructor.
+    
+    3.Default Constructor =  A constructor that has no parameters is known as default the constructor. A default constructor is invisible. 
+    And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor. 
+    It is taken out. It is being overloaded and called a parameterized constructor. The default constructor changed into the parameterized constructor. 
+    But Parameterized constructor can’t change the default constructor.
+
+    
     
      
       
