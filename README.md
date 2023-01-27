@@ -96,9 +96,10 @@
       To remove ambiguity:
       Multiple inheritance is not supported in java as it causes ambiguity in few scenarios. The most common scenario is Diamond problem.
       
-                                        ![image](https://user-images.githubusercontent.com/35212651/215025046-ba47d5ae-8de8-4467-89ea-bc5cac147932.png)
+                    ![alt text]([http://url/to/img.png](https://user-images.githubusercontent.com/35212651/215025046-ba47d5ae-8de8-4467-89ea-bc5cac147932.png))
+                                        
 
-      
+    
                                   Class A {
           void show(){}
       }
