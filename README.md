@@ -140,7 +140,7 @@
     7.Inheritance is-a relationship between a Base class and its child class.
     8.Multiple inheritance is not supported in JAVA.
         
-**10. Can Interfaces to be extended ?**
+**10. Can Interfaces to be extended OR Can an Interface implement another Interface ?**
 
     Yes, an interface can extend other interfaces. it supports multiple inheritances, which means it can extend more than one interface. 
     But every class which wants to use an interface must add it by keyword implements and using the keyword extends for 
@@ -316,6 +316,20 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
     And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor. 
     It is taken out. It is being overloaded and called a parameterized constructor. The default constructor changed into the parameterized constructor. 
     But Parameterized constructor can’t change the default constructor.
+    
+**14. What is the difference between a constructor and a method ?**
+
+    1.The name of the constructor is same as that of the class name, whereas the name of the method can be anything.
+
+    2.There is no return type of a constructor.
+
+    3.When you make an object of a class, then the constructor of that class will be called automatically. But for methods, we need to call it explicitely.
+
+    4.Constructors can't be inherited but you can call the constructor of the parent class by calling super().
+
+    5.Constructor and a method they both run a block of code but the difference is in calling them.
+
+    6.We can call method directly using their name.
 
     
     
