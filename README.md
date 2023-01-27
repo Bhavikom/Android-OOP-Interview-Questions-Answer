@@ -101,42 +101,44 @@
       the same method of class A. Now the problem comes when class D is extending both class B & C and if class D wants to use same method 
       then which method would be called? That’s why multiple inheritance is not supported in java as to remove ambiguity.
       
-**8. Use of super keywork in Inheritance **
+      
+**8. Use of super keywork in Inheritance. ?**
 
-        Base.java:
-        class Base
-        {
-            int x=50;
-        }
-        Child.java:
-        class Child extends Base
-        {
-            int x=20;
-            void show()
-            {
+      Base.java:
+      class Base
+      {
+           int x=50;
+      }
+      Child.java:
+      class Child extends Base
+      {
+           int x=20;
+           void show()
+           {
                 System.out.println(x);
                 System.out.println(super.x);
-            }
-        }
-        public class InheritanceAbhiAndroid{
-            public static void main(String[] args)
-            {
-                Child c=new Child();
-                c.show();
-            }
-        }
+           }
+       }
+       public class InheritanceAbhiAndroid{
+           public static void main(String[] args)
+           {
+               Child c=new Child();
+               c.show();
+           }
+       }
+    
     
 **9. Inheritance Important Points To Remember: **
 
-   1.Whenever a parent class and a child class both are having same data members then this concept is known as data hiding.
-   2.Whenever a parent class and a child class both are having ditto same functions then this concept is known as method overriding.
-   3.Whenever a parent class and a child class both are having same static functions then this concept is known as function hiding.
-   4.We cannot print super, there is a syntax error. Always data members of parent class is inherited by super
-   5.If you make any non static function of a class as final then it cannot be overridden by the child class that means to 
-     stop method overriding makes a function final.
-   6.Inheritance allows the class to use the states and behavior of another class using extends keyword
-   7.Inheritance is-a relationship between a Base class and its child class.
-   8.Multiple inheritance is not supported in JAVA.
+    1.Whenever a parent class and a child class both are having same data members then this concept is known as data hiding.
+    2.Whenever a parent class and a child class both are having ditto same functions then this concept is known as method overriding.
+    3.Whenever a parent class and a child class both are having same static functions then this concept is known as function hiding.
+    4.We cannot print super, there is a syntax error. Always data members of parent class is inherited by super
+    5.If you make any non static function of a class as final then it cannot be overridden by the child class that means to 
+        stop method overriding makes a function final.
+    6.Inheritance allows the class to use the states and behavior of another class using extends keyword
+    7.Inheritance is-a relationship between a Base class and its child class.
+    8.Multiple inheritance is not supported in JAVA.
         
 **10. Can Interfaces to be extended ?**
 
