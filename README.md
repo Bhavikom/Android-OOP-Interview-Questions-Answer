@@ -128,17 +128,116 @@
     
 **9. Inheritance Important Points To Remember: **
 
-        1.Whenever a parent class and a child class both are having same data members then this concept is known as data hiding.
-        2.Whenever a parent class and a child class both are having ditto same functions then this concept is known as method overriding.
-        3.Whenever a parent class and a child class both are having same static functions then this concept is known as function hiding.
-        4.We cannot print super, there is a syntax error. Always data members of parent class is inherited by super
-        5.If you make any non static function of a class as final then it cannot be overridden by the child class that means to 
-          stop method overriding makes a function final.
-        6.Inheritance allows the class to use the states and behavior of another class using extends keyword
-        7.Inheritance is-a relationship between a Base class and its child class.
-        8.Multiple inheritance is not supported in JAVA.
+   1.Whenever a parent class and a child class both are having same data members then this concept is known as data hiding.
+   2.Whenever a parent class and a child class both are having ditto same functions then this concept is known as method overriding.
+   3.Whenever a parent class and a child class both are having same static functions then this concept is known as function hiding.
+   4.We cannot print super, there is a syntax error. Always data members of parent class is inherited by super
+   5.If you make any non static function of a class as final then it cannot be overridden by the child class that means to 
+     stop method overriding makes a function final.
+   6.Inheritance allows the class to use the states and behavior of another class using extends keyword
+   7.Inheritance is-a relationship between a Base class and its child class.
+   8.Multiple inheritance is not supported in JAVA.
         
-**10. 
+**10. Can Interfaces to be extended ?**
+
+   Yes, an interface can extend other interfaces. it supports multiple inheritances, which means it can extend more than one interface. 
+   But every class which wants to use an interface must add it by keyword implements and using the keyword extends for 
+   interfaces in classes is illegal and cause compile error.
+    
+**11. Abstraction in OOP ?**
+
+   Abstraction is the concept of object-oriented programming that “shows” only essential attributes and “hides” unnecessary information. 
+   The main purpose of abstraction is hiding the unnecessary details from the users. Abstraction is selecting data from a larger pool 
+   to show only relevant details of the object to the user. It helps in reducing programming complexity and efforts. 
+   It is one of the most important concepts of OOPs.
+
+   Consider a real-life example of a man driving a car. The man only knows that pressing the accelerators will increase the speed 
+   of a car or applying brakes will stop the car, but he does not know how on pressing the accelerator the speed is actually increasing, 
+   he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc in the car. This is what abstraction is. 
+   
+   In java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces
+   
+   Abstract classes and Abstract methods :  
+
+   1.An abstract class is a class that is declared with an abstract keyword.
+   2.An abstract method is a method that is declared without implementation.
+   3.An abstract class may or may not have all abstract methods. Some of them can be concrete methods
+   4.A method-defined abstract must always be redefined in the subclass, thus making overriding compulsory or making the subclass itself abstract.
+   5.Any class that contains one or more abstract methods must also be declared with an abstract keyword.
+   6.There can be no object of an abstract class. That is, an abstract class can not be directly instantiated with the new operator.
+   7.An abstract class can have parameterized constructors and the default constructor is always present in an abstract class.
+   
+   When to use abstract classes and abstract methods with an example
+
+   There are situations in which we will want to define a superclass that declares the structure of a given abstraction without providing a complete 
+   implementation of    every method. Sometimes we will want to create a superclass that only defines a generalization form that will be shared by 
+   all of its subclasses, leaving it to each    subclass to fill in the details.
+
+   Consider a classic “shape” example, perhaps used in a computer-aided design system or game simulation. The base type is “shape” and each shape has a color, size,      and so on. From this, specific types of shapes are derived(inherited)-circle, square, triangle, and so on — each of which may have additional characteristics and      behaviors. For example, certain shapes can be flipped. Some behaviors may be different, such as when you want to calculate the area of a shape. The type hierarchy      embodies both the similarities and differences between the shapes.
+
+   // Java program to illustrate the
+    abstract class Shape {
+        String color;
+        // these are abstract methods
+        abstract double area();
+        public abstract String toString();
+        // abstract class can have the constructor
+        public Shape(String color)
+        {
+            System.out.println("Shape constructor called");
+            this.color = color;
+        }
+        // this is a concrete method
+        public String getColor() { return color; }
+    }
+    class Circle extends Shape {
+        double radius;
+        public Circle(String color, double radius)
+        {
+            // calling Shape constructor
+            super(color);
+            System.out.println("Circle constructor called");
+            this.radius = radius;
+        }
+        @Override double area()
+        {
+            return Math.PI * Math.pow(radius, 2);
+        }
+        @Override public String toString()
+        {
+            return "Circle color is " + super.getColor()
+            + "and area is : " + area();
+        }
+    }
+    class Rectangle extends Shape {
+        double length;
+        double width;
+        public Rectangle(String color, double length,double width)
+        {
+            // calling Shape constructor
+            super(color);
+            System.out.println("Rectangle constructor called");
+            this.length = length;
+            this.width = width;
+        }
+        @Override double area() { return length * width; }
+        @Override public String toString()
+        {
+            return "Rectangle color is " + super.getColor()
+                + "and area is : " + area();
+        }
+    }
+    public class Test {
+        public static void main(String[] args)
+        {
+            Shape s1 = new Circle("Red", 2.2);
+            Shape s2 = new Rectangle("Yellow", 2, 4);
+            System.out.println(s1.toString());
+            System.out.println(s2.toString());
+        }
+    }
+
+    
     
      
       
