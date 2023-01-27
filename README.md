@@ -238,6 +238,26 @@
             System.out.println(s2.toString());
         }
     }
+    
+**12. Differences between abstract classes and interfaces ?**
+
+    An abstract class, is a class that contains both concrete and abstract methods (methods without implementations). 
+    An abstract method must be implemented by the abstract class sub-classes. Abstract classes cannot be instantiated and need to be extended to be used.
+
+    An interface is like a blueprint/contract of a class (or it may be thought of as a class with methods, but without their implementation). 
+    It contains empty methods that represent, what all of its subclasses should have in common. The subclasses provide the implementation for each of these methods.       Interfaces are implemented.
+    
+Support multiple inheritances	Does not support multiple inheritances
+Can extends another interfaces only	Can extends another class and implement multiple interfaces
+Does not contain data member	Contains data member
+Does not contains constructors	contains constructors
+In Java Contains only incomplete member (signature of member)	Contains both signature (abstract) of method and member functions
+Cannot have access modifiers by default and everything is assumed as public	Can has access modifiers for subs, methods and fields
+![image](https://user-images.githubusercontent.com/35212651/215100046-d4d3b8b8-a30a-42ba-9cc7-7aaa0f107b10.png)
+
+    
+**13. 
+
 
     
     
