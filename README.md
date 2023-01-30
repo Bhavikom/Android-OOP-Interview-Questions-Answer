@@ -346,7 +346,7 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
 
     6.We can call method directly using their name.
     
- **9. How to prevent a class to be extended ?**
+ **16. How to prevent a class to be extended ?**
 
 	simply use keyword final in definition of class or methods. for example:
 
