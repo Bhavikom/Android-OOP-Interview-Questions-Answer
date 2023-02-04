@@ -190,9 +190,13 @@
 
     There are situations in which we will want to define a superclass that declares the structure of a given abstraction without providing a complete 
     implementation of    every method. Sometimes we will want to create a superclass that only defines a generalization form that will be shared by 
-    all of its subclasses, leaving it to each    subclass to fill in the details.
+    all of its subclasses, leaving it to each subclass to fill in the details.
 
-    Consider a classic “shape” example, perhaps used in a computer-aided design system or game simulation. The base type is “shape” and each shape has a color, size,       and so on. From this, specific types of shapes are derived(inherited)-circle, square, triangle, and so on — each of which may have additional characteristics and       behaviors. For example, certain shapes can be flipped. Some behaviors may be different, such as when you want to calculate the area of a shape. The type hierarchy     embodies both the similarities and differences between the shapes.
+    Consider a classic “shape” example, perhaps used in a computer-aided design system or game simulation.
+    The base type is “shape” and each shape has a color, size, and so on. From this, specific types of shapes are derived(inherited)-circle, 
+    square, triangle, and so on — each of which may have additional characteristics and behaviors. For example, certain shapes can be 
+    flipped. Some behaviors may be different, such as when you want to calculate the area of a shape. The type hierarchy embodies both 
+    the similarities and differences between the shapes.
 
     // Java program to illustrate the
     abstract class Shape {
