@@ -354,12 +354,58 @@ Cannot have access modifiers by default and everything is assumed as public	Can 
     
  **16. How to prevent a class to be extended ?**
 
-	simply use keyword final in definition of class or methods. for example:
+    simply use keyword final in definition of class or methods. for example:
+	
+ **17. Runtime polymorphism or Dynamic Method Dispatch or Method Overriding ?**
+ 
+    Polymorphism in Java is a concept by which we can perform a single action in different ways.
 
+    Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is resolved 
+    at runtime rather than compile-time.
     
+    In this process, an overridden method is called through the reference variable of a superclass. The determination
+    of the method to be called is based on the object being referred to by the reference variable.
+
+    Let's first understand the upcasting before Runtime Polymorphism.
+
+   *Upcasting
     
+    If the reference variable of Parent class refers to the object of Child class, it is known as upcasting. For example:
      
-      
+    class A{}  
+    class B extends A{}  
+    A a=new B();//upcasting  
+    
+   *Java Runtime Polymorphism Example
+   
+   Consider a scenario where Bank is a class that provides a method to get the rate of interest. However, the rate of interest 
+   may differ according to banks. For example, SBI, ICICI, and AXIS banks are providing 8.4%, 7.3%, and 9.7% rate of interest.
+   
+   Example : 
+   
+   class Bank{  
+	float getRateOfInterest(){return 0;}  
+   }  
+   class SBI extends Bank{  
+        float getRateOfInterest(){return 8.4f;}    
+   }   
+   class ICICI extends Bank{  
+        float getRateOfInterest(){return 7.3f;}  
+   }  
+   class AXIS extends Bank{  
+        float getRateOfInterest(){return 9.7f;}  
+   }  
+   class TestPolymorphism{  
+        public static void main(String args[]){  
+        Bank b;  
+        b=new SBI();  
+        System.out.println("SBI Rate of Interest: "+b.getRateOfInterest());  
+        b=new ICICI();  
+        System.out.println("ICICI Rate of Interest: "+b.getRateOfInterest());  
+        b=new AXIS();  
+        System.out.println("AXIS Rate of Interest: "+b.getRateOfInterest());  
+        }  
+   }  
       
 
   
