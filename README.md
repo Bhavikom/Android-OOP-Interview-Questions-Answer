@@ -262,21 +262,33 @@
     
 **13. Differences between abstract classes and interfaces ?**
 
-    An abstract class, is a class that contains both concrete and abstract methods (methods without implementations). 
-    An abstract method must be implemented by the abstract class sub-classes. Abstract classes cannot be instantiated and need to be extended to be used.
-
-    An interface is like a blueprint/contract of a class (or it may be thought of as a class with methods, but without their implementation). 
-    It contains empty methods that represent, what all of its subclasses should have in common. The subclasses provide the implementation for each of these methods.       Interfaces are implemented.
-    
-Support multiple inheritances	Does not support multiple inheritances
-Can extends another interfaces only	Can extends another class and implement multiple interfaces
-Does not contain data member	Contains data member
-Does not contains constructors	contains constructors
-In Java Contains only incomplete member (signature of member)	Contains both signature (abstract) of method and member functions
-Cannot have access modifiers by default and everything is assumed as public	Can has access modifiers for subs, methods and fields
-![image](https://user-images.githubusercontent.com/35212651/215100046-d4d3b8b8-a30a-42ba-9cc7-7aaa0f107b10.png)
-
-    
+	As we know that abstraction refers to hiding the internal implementation of the feature and only showing the functionality 
+	to the users. i.e. what it works (showing), how it works (hiding). Both abstract class and interface are used for abstraction, 
+	henceforth Interface and Abstract Class are required prerequisites.    
+	
+	To differensiate them read below points:
+	
+	1. Abstract classes are not fully abstract class can have both abstract as well as non abstract methods and non abstract
+	methods make it partial abstraction, where interface can have only abstract methods so it gives full abstraction.
+	
+	2. An abstract class, is a class that contains both concrete and abstract methods (methods without implementations). where
+	interface contain only abstract methods.
+	
+	3. From Java 8, Abstract classes can have default and static methods also. From Java 9, it can have private concrete methods as well,
+	where interface contain only abstract methods.
+	
+	4. Variables declared in a Java interface are by default final. An abstract class may contain non-final variables.
+	
+	5. Abstract class can have final, non-final, static and non-static variables. The interface has only static and final variables.
+	
+	6. Abstract class can provide the implementation of the interface. Interface can’t provide the implementation of an abstract class.
+	
+	7. An interface can extend one or more Java interfaces; an abstract class can extend another Java class and implement multiple Java interfaces.
+	
+	8. Members of a Java interface are public by default. A Java abstract class can have class members like private, protected, etc.
+	
+	9. Abstract classes cannot be instantiated and need to be extended to be used where we can create instant of interface class.
+   
 **14. What is constructor in OOP ?**
 
     constructors in Java is a terminology used to construct something in our programs. A constructor in Java is a special method that is 
