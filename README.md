@@ -419,7 +419,106 @@
         b=new AXIS();  
         System.out.println("AXIS Rate of Interest: "+b.getRateOfInterest());  
         }  
-   }  
+   } 
+   
+**18. Why non-static variable cannot be referenced from a static method in Java ?**
+
+	
+	Static Method: A static method is a method that belongs to a class, but it does not belong to an instance of that class and 
+	this method can be called without the instance or object of that class. In the static method, the method can only access only 
+	static data members and static methods of another class or same class but cannot access non-static methods and variables.
+	
+	Non-static method: Any method whose definition doesn’t contain the static keyword is a non-static method. In the non-static method, 
+	the method can access static data members and static methods as well as non-static members and method of another class or same class, 
+	also can change the values of any static data member.
+	
+	What is the Issue with non-static variable referenced from static context?
+	
+	Let’s consider the following code where class A is created with a non-static variable and a static method. 
+	The object of this class is being created in another class and the static method is being accessed as follows:
+ 
+	// Java program to demonstrate
+	// why a non-static variable cannot
+	// be accessed from a static context
+ 
+	// Creating a class A
+	class A {
+ 		// A non-static variable
+    		int N;
+ 		// Static method
+    		public static void increment()
+    		{
+          		// this throws a compile - time error.     
+        		N++;
+    		}
+	}
+ 
+	public class Demo {
+ 
+    		// Main method
+    		public static void main(String args[])
+    		{
+        		// Creating multiple objects
+        		// for class A
+        		A obj1 = new A();
+        		A obj2 = new A();
+        		A obj3 = new A();
+ 
+        		// Assigning the different values
+        		// for the non static variable N
+        		obj1.N = 3;
+        		obj2.N = 4;
+        		obj3.N = 5;
+ 
+        		// Calling the method
+        		A.increment();
+ 
+		        System.out.println(obj1.N);
+        		System.out.println(obj2.N);
+        		System.out.println(obj3.N);
+    		}
+	}
+	IF this code could actually be run, you would expect the output to be: 
+	
+	4
+	5
+	6
+	
+	But instead a compile-time error is thrown
+ 	Compile Errors:
+	prog.java:16: error: non-static variable N cannot be referenced from a static context
+        	N++;
+        	^
+		1 error
+		
+	Why does this error occur?
+	
+	For the non-static variable, there is a need for an object instance to call the variables. We can also create multiple objects 
+	by assigning different values for that non-static variable. So, different objects may have different values for the same variable. 
+	In the above program we have created three objects obj1, obj2, obj3 for the class A and assigned the three different values 
+	3, 4, 5 for the objects obj1, obj2, obj3 respectively. When we try to call the function increment, as every object of N have 
+	its own value there will be ambiguity for the compiler to understand for what value of N should the method increment the value.
+	
+	How to solve this error? 
+	
+	In order to avoid ambiguity, the java compiler throws a compile time error. Therefore, this issue can be solved by addressing 
+	the variables with the object names. In short, we always need to create an object in order to refer to a non-static variable 
+	from a static context. Whenever a new instance is created, a new copy of all the non-static variables and methods are created. 
+	By using the reference of the new instance, these variables can be accessed. For example:
+	
+	public class GFG {
+    		int count = 0;
+ 		// Driver code
+    		public static void main(String args[])
+    		{
+ 			// Accessing static variable
+        		// by creating an instance
+        		// of the class
+        		GFG test = new GFG();
+        		test.count++;
+        		System.out.println(test.count);
+    		}
+	}
       
 
   
