@@ -112,7 +112,9 @@
 
       To remove ambiguity:
       Multiple inheritance is not supported in java as it causes ambiguity in few scenarios. The most common scenario is Diamond problem.
-        ![ambiguity-problem-in-JAVA](https://user-images.githubusercontent.com/35212651/215060953-fd0b51a8-728b-4a46-893b-db2446215cc2.jpg)
+      
+      
+ ![ambiguity-problem-in-JAVA](https://user-images.githubusercontent.com/35212651/215060953-fd0b51a8-728b-4a46-893b-db2446215cc2.jpg)
         
       Consider the above diagram which shows multiple inheritance. In this class D extends both class B & C.Here class B & C inherit 
       the same method of class A. Now the problem comes when class D is extending both class B & C and if class D wants to use same method 
